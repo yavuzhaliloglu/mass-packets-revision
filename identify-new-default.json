@@ -1,0 +1,284 @@
+// JSON Default (6.85 KB)
+{
+    "device": {
+        "flag": "XYZ",
+        "serialNumber": "0123456789ABCDE"
+    },
+    "function": "identification",
+    "referenceId": "3d0b242e-1866-4a41-a8ca-1372f1b34ab7",
+    "response": {
+        "registered": true,
+        "brand": "Marka1",
+        "model": "Model1",
+        "type": "MM_GSM",
+        "protocolVersion": "1.0.0",
+        "manufactureDate": "2023-05-23",
+        "firmware": "1.01",
+        "signal": 13,
+        "heartbeatPeriod": 10,
+        "deviceDate": "2021-06-02 17:19:58",
+        "daylightSaving": true,
+        "timezone": "+03:00",
+        "restartPeriod": 8,
+        "readDataLifeSpan": 24,
+        "servers": [
+            {
+                "ip": "123.45.68.10",
+                "tcpPort": 1234,
+                "udpPort": 4567,
+                "primary": true
+            },
+            {
+                "ip": "123.45.68.11",
+                "tcpPort": 1234,
+                "udpPort": 4567
+            }
+        ],
+        "ntp": {
+            "server": "",
+            "port": 0,
+            "period": 15
+        },
+        "ipAddressWhiteList": [
+            "123.45.68.10"
+        ],
+        "retryInterval": 10,
+        "retryCount": 3,
+        "maxPackageSize": 65536,
+        "mqtt": [
+            {
+                "primary": true,
+                "host": "127.0.0.1",
+                "port": 1234,
+                "use_user": true,
+                "username": "mqtt",
+                "password": "mqtt",
+                "client_id": "",
+                "clean_session": null,
+                "retain": false,
+                "ques": 0,
+                "keepalive": 120,
+                "protocol": "v311",
+                "security": {
+                    "ssl_security": false,
+                    "tls_version": "TLSv1_2",
+                    "tls_insecure_set": false,
+                    "cafile": "conf/certs/ca.crt_primary",
+                    "keyfile": "",
+                    "certfile": ""
+                }
+            },
+            {
+                "primary": false,
+                "host": "127.0.0.10",
+                "port": 1234,
+                "use_user": true,
+                "username": "mqtt",
+                "password": "mqtt",
+                "client_id": "",
+                "clean_session": null,
+                "retain": false,
+                "ques": 0,
+                "keepalive": 120,
+                "protocol": "v311",
+                "security": {
+                    "ssl_security": false,
+                    "tls_version": "TLSv1_2",
+                    "tls_insecure_set": false,
+                    "cafile": "conf/certs/ca.crt_primary",
+                    "keyfile": "",
+                    "certfile": ""
+                }
+            }
+        ],
+        "communicationInterfaces": [
+            {
+                "id": 1,
+                "type": "gsm",
+                "simType": "embedded",
+                "imei": "123456789012345",
+                "phoneNumber": "5012345678",
+                "ip": "123.45.68.9",
+                "port": 2403,
+                "apn": {
+                    "name": "",
+                    "user": "osos"
+                },
+                "simId": "",
+                "imsi": "",
+                "primary": true
+            },
+            {
+                "id": 2,
+                "type": "wifi",
+                "phoneNumber": "2121234567",
+                "ip": "123.45.68.10",
+                "port": 1308,
+                "mac": "",
+                "subnet": ""
+            }
+        ],
+        "serialPorts": [
+            {
+                "id": 1,
+                "type": "rs485",
+                "name": "rs485-1",
+                "port": 7000,
+                "status": 0
+            },
+            {
+                "id": 2,
+                "type": "rs485",
+                "name": "rs485-2",
+                "port": 7001,
+                "status": 0
+            },
+            {
+                "id": 3,
+                "type": "rs232",
+                "name": "rs232",
+                "port": 7002,
+                "status": 0
+            }
+        ],
+        "ioInterfaces": [
+            {
+                "id": 1,
+                "type": "relay",
+                "name": "relay-1",
+                "status": 0
+            },
+            {
+                "id": 2,
+                "type": "relay",
+                "name": "relay-2",
+                "status": 0
+            },
+            {
+                "id": 3,
+                "type": "dryContact",
+                "name": "dry-1",
+                "status": 1
+            },
+            {
+                "id": 4,
+                "type": "digitalInput",
+                "name": "panoKapagi",
+                "status": 0
+            },
+            {
+                "id": 5,
+                "type": "digitalInput",
+                "name": "digitalInput-2",
+                "status": 0
+            }
+        ],
+        "astroRelay": {
+            "enabled": true,
+            "ioInterfaceId": 1,
+            "startDate": "2024-12-16",
+            "closeRelayTime": [
+                6,
+                31,
+                6,
+                32
+            ],
+            "openRelayTime": [
+                17,
+                30,
+                17,
+                29
+            ],
+            "latitude": 39.91304631466775,
+            "longitude": 32.826425051205966,
+            "closeRelayOffset": 10,
+            "openRelayOffset": 15
+        },
+        "modules": [
+            {
+                "type": "G3 | G3 Hibrit | Wisun | BPL",
+                "brand": "",
+                "model": "",
+                "serialNumber": "",
+                "ip": "",
+                "ipV6": "",
+                "mac": "",
+                "frequency": ""
+            }
+        ],
+        "meters": [
+            {
+                "protocol:": "IEC62056",
+                "type": "electricity",
+                "brand": "MKL",
+                "serialNumber": "12345678",
+                "serialPort": "rs485-1",
+                "initBaud": 300,
+                "fixBaud": false,
+                "frame": "7E1",
+                "module": "01-23-45-67-89-ab"
+            },
+            {
+                "protocol:": "DLMS",
+                "type": "electricity",
+                "brand": "EMH",
+                "serialNumber": "12345678",
+                "serialPort": "rs485-2",
+                "initBaud": 2400,
+                "fixBaud": true,
+                "frame": "8N1",
+                "module": "01-12-45-67-89-ab"
+            }
+        ]
+    }
+}
+// JSON Kısaltılmış (2.9 KB)
+{"device":{"flag":"XYZ","serialNumber":"0123456789ABCDE"},"function":"identification","referenceId":"3d0b242e-1866-4a41-a8ca-1372f1b34ab7","response":{"registered":true,"brand":"Marka1","model":"Model1","type":"MM_GSM","protocolVersion":"1.0.0","manufactureDate":"2023-05-23","firmware":"1.01","signal":13,"heartbeatPeriod":10,"deviceDate":"2021-06-02 17:19:58","daylightSaving":true,"timezone":"+03:00","restartPeriod":8,"readDataLifeSpan":24,"servers":[{"ip":"123.45.68.10","tcpPort":1234,"udpPort":4567,"primary":true},{"ip":"123.45.68.11","tcpPort":1234,"udpPort":4567}],"ntp":{"server":"","port":0,"period":15},"ipAddressWhiteList":["123.45.68.10"],"retryInterval":10,"retryCount":3,"maxPackageSize":65536,"mqtt":[{"primary":true,"host":"127.0.0.1","port":1234,"use_user":true,"username":"mqtt","password":"mqtt","client_id":"","clean_session":null,"retain":false,"ques":0,"keepalive":120,"protocol":"v311","security":{"ssl_security":false,"tls_version":"TLSv1_2","tls_insecure_set":false,"cafile":"conf/certs/ca.crt_primary","keyfile":"","certfile":""}},{"primary":false,"host":"127.0.0.10","port":1234,"use_user":true,"username":"mqtt","password":"mqtt","client_id":"","clean_session":null,"retain":false,"ques":0,"keepalive":120,"protocol":"v311","security":{"ssl_security":false,"tls_version":"TLSv1_2","tls_insecure_set":false,"cafile":"conf/certs/ca.crt_primary","keyfile":"","certfile":""}}],"communicationInterfaces":[{"id":1,"type":"gsm","simType":"embedded","imei":"123456789012345","phoneNumber":"5012345678","ip":"123.45.68.9","port":2403,"apn":{"name":"","user":"osos"},"simId":"","imsi":"","primary":true},{"id":2,"type":"wifi","phoneNumber":"2121234567","ip":"123.45.68.10","port":1308,"mac":"","subnet":""}],"serialPorts":[{"id":1,"type":"rs485","name":"rs485-1","port":7000,"status":0},{"id":2,"type":"rs485","name":"rs485-2","port":7001,"status":0},{"id":3,"type":"rs232","name":"rs232","port":7002,"status":0}],"ioInterfaces":[{"id":1,"type":"relay","name":"relay-1","status":0},{"id":2,"type":"relay","name":"relay-2","status":0},{"id":3,"type":"dryContact","name":"dry-1","status":1},{"id":4,"type":"digitalInput","name":"panoKapagi","status":0},{"id":5,"type":"digitalInput","name":"digitalInput-2","status":0}],"astroRelay":{"enabled":true,"ioInterfaceId":1,"startDate":"2024-12-16","closeRelayTime":[6,31,6,32],"openRelayTime":[17,30,17,29],"latitude":39.91304631466775,"longitude":32.826425051205966,"closeRelayOffset":10,"openRelayOffset":15},"modules":[{"type":"G3 | G3 Hibrit | Wisun | BPL","brand":"","model":"","serialNumber":"","ip":"","ipV6":"","mac":"","frequency":""}],"meters":[{"protocol:":"IEC62056","type":"electricity","brand":"MKL","serialNumber":"12345678","serialPort":"rs485-1","initBaud":300,"fixBaud":false,"frame":"7E1","module":"01-23-45-67-89-ab"},{"protocol:":"DLMS","type":"electricity","brand":"EMH","serialNumber":"12345678","serialPort":"rs485-2","initBaud":2400,"fixBaud":true,"frame":"8N1","module":"01-12-45-67-89-ab"}]}}
+
+// CBOR (2257 Bytes)
+A466646576696365A264666C61676358595A6C73657269616C4E756D6265726F30313233343536373839414243444568667
+56E6374696F6E6E6964656E74696669636174696F6E6B7265666572656E63654964782433643062323432652D313836362D
+346134312D613863612D31333732663162333461623768726573706F6E7365B81B6A72656769737465726564F5656272616
+E64664D61726B6131656D6F64656C664D6F64656C316474797065664D4D5F47534D6F70726F746F636F6C56657273696F6E
+65312E302E306F6D616E7566616374757265446174656A323032332D30352D3233686669726D7761726564312E303166736
+9676E616C0D6F686561727462656174506572696F640A6A6465766963654461746573323032312D30362D30322031373A31
+393A35386E6461796C69676874536176696E67F56874696D657A6F6E65662B30333A30306D72657374617274506572696F6
+4087072656164446174614C6966655370616E1818677365727665727382A46269706C3132332E34352E36382E3130677463
+70506F72741904D267756470506F72741911D7677072696D617279F5A36269706C3132332E34352E36382E3131677463705
+06F72741904D267756470506F72741911D7636E7470A3667365727665726064706F72740066706572696F640F7269704164
+647265737357686974654C697374816C3132332E34352E36382E31306D7265747279496E74657276616C0A6A72657472794
+36F756E74036E6D61785061636B61676553697A651A00010000646D71747482AD677072696D617279F564686F7374693132
+372E302E302E3164706F72741904D2687573655F75736572F568757365726E616D65646D7174746870617373776F7264646
+D71747469636C69656E745F6964606D636C65616E5F73657373696F6EF66672657461696EF4647175657300696B65657061
+6C69766518786870726F746F636F6C6476333131687365637572697479A66C73736C5F7365637572697479F46B746C735F7
+6657273696F6E67544C5376315F3270746C735F696E7365637572655F736574F466636166696C657819636F6E662F636572
+74732F63612E6372745F7072696D617279676B657966696C6560686365727466696C6560AD677072696D617279F464686F7
+3746A3132372E302E302E313064706F72741904D2687573655F75736572F568757365726E616D65646D7174746870617373
+776F7264646D71747469636C69656E745F6964606D636C65616E5F73657373696F6EF66672657461696EF46471756573006
+96B656570616C69766518786870726F746F636F6C6476333131687365637572697479A66C73736C5F7365637572697479F4
+6B746C735F76657273696F6E67544C5376315F3270746C735F696E7365637572655F736574F466636166696C657819636F6
+E662F63657274732F63612E6372745F7072696D617279676B657966696C6560686365727466696C656077636F6D6D756E69
+636174696F6E496E746572666163657382AB6269640164747970656367736D6773696D5479706568656D626564646564646
+96D65696F3132333435363738393031323334356B70686F6E654E756D6265726A353031323334353637386269706B313233
+2E34352E36382E3964706F72741909636361706EA2646E616D65606475736572646F736F736573696D49646064696D73696
+0677072696D617279F5A762696402647479706564776966696B70686F6E654E756D6265726A323132313233343536376269
+706C3132332E34352E36382E313064706F727419051C636D616360667375626E6574606B73657269616C506F72747383A56
+26964016474797065657273343835646E616D656772733438352D3164706F7274191B586673746174757300A56269640264
+74797065657273343835646E616D656772733438352D3264706F7274191B596673746174757300A56269640364747970656
+57273323332646E616D6565727332333264706F7274191B5A66737461747573006C696F496E746572666163657385A46269
+640164747970656572656C6179646E616D656772656C61792D316673746174757300A46269640264747970656572656C617
+9646E616D656772656C61792D326673746174757300A46269640364747970656A647279436F6E74616374646E616D656564
+72792D316673746174757301A46269640464747970656C6469676974616C496E707574646E616D656A70616E6F4B6170616
+7696673746174757300A46269640564747970656C6469676974616C496E707574646E616D656E6469676974616C496E7075
+742D3266737461747573006A617374726F52656C6179A967656E61626C6564F56D696F496E7465726661636549640169737
+4617274446174656A323032342D31322D31366E636C6F736552656C617954696D658406181F0618206D6F70656E52656C61
+7954696D658411181E11181D686C61746974756465FB4043F4DEB39E9D9C696C6F6E676974756465FB404069C84BCBC32B7
+0636C6F736552656C61794F66667365740A6F6F70656E52656C61794F66667365740F676D6F64756C657381A86474797065
+781C4733207C20473320486962726974207C20576973756E207C2042504C656272616E6460656D6F64656C606C736572696
+16C4E756D6265726062697060646970563660636D616360696672657175656E637960666D657465727382A96970726F746F
+636F6C3A68494543363230353664747970656B656C656374726963697479656272616E64634D4B4C6C73657269616C4E756
+D6265726831323334353637386A73657269616C506F72746772733438352D3168696E69744261756419012C676669784261
+7564F4656672616D6563374531666D6F64756C657130312D32332D34352D36372D38392D6162A96970726F746F636F6C3A6
+4444C4D5364747970656B656C656374726963697479656272616E6463454D486C73657269616C4E756D6265726831323334
+353637386A73657269616C506F72746772733438352D3268696E6974426175641909606766697842617564F5656672616D6
+563384E31666D6F64756C657130312D31322D34352D36372D38392D6162
