@@ -1,0 +1,82 @@
+// JSON Default (1.5 KB)
+{
+  "device": {
+    "flag": "XYZ",
+    "serialNumber": "0123456789ABCDE"
+  },
+  "function": "directive",
+  "referenceId": "3d0b242e-1866-4a41-a8ca-1372f1b34ab7",
+  "request": {
+    "operation": "add",
+    "directives": [
+      {
+        "id": "ReadoutDirective1",
+        "steps": [
+          {
+            "order" : 1,
+            "operation": "setBaud",
+            "parameter": 300
+          },
+          {
+            "order" : 2,
+            "operation": "setFraming",
+            "parameter": "7E1"
+          },
+          {
+            "order" : 3,
+            "operation": "sendData",
+            "parameter": [47, 63, "METERSERIALNUMBER", 33, 13, 10]
+          },
+          {
+            "order" : 4,
+            "operation": "wait",
+            "parameter": 10
+          },
+          {
+            "order" : 5,
+            "operation": "readData",
+            "parameter": "id"
+          },
+          {
+            "order" : 6,
+            "operation": "sendData",
+            "parameter": [6, 48, 54, 48, 13, 10]
+          },
+          {
+            "order" : 7,
+            "operation": "setBaud",
+            "parameter": 9600
+          },
+          {
+            "order" : 8,
+            "operation": "wait",
+            "parameter": 600
+          },
+          {
+            "order" : 9,
+            "operation": "readData",
+            "parameter": "rawData"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+// JSON Kısaltılmış (721 Byte)
+{"device":{"flag":"XYZ","serialNumber":"0123456789ABCDE"},"function":"directive","referenceId":"3d0b242e-1866-4a41-a8ca-1372f1b34ab7","request":{"operation":"add","directives":[{"id":"ReadoutDirective1","steps":[{"order":1,"operation":"setBaud","parameter":300},{"order":2,"operation":"setFraming","parameter":"7E1"},{"order":3,"operation":"sendData","parameter":[47,63,"METERSERIALNUMBER",33,13,10]},{"order":4,"operation":"wait","parameter":10},{"order":5,"operation":"readData","parameter":"id"},{"order":6,"operation":"sendData","parameter":[6,48,54,48,13,10]},{"order":7,"operation":"setBaud","parameter":9600},{"order":8,"operation":"wait","parameter":600},{"order":9,"operation":"readData","parameter":"rawData"}]}]}}
+
+
+// CBOR Veri (567 Byte)
+A466646576696365A264666C61676358595A6C73657269616C4E756D6265726F30313233343536373839414243444568667
+56E6374696F6E696469726563746976656B7265666572656E63654964782433643062323432652D313836362D346134312D
+613863612D3133373266316233346162376772657175657374A2696F7065726174696F6E636164646A64697265637469766
+57381A262696471526561646F75744469726563746976653165737465707389A3656F7264657201696F7065726174696F6E
+677365744261756469706172616D6574657219012CA3656F7264657202696F7065726174696F6E6A7365744672616D696E6
+769706172616D6574657263374531A3656F7264657203696F7065726174696F6E6873656E644461746169706172616D6574
+657286182F183F714D4554455253455249414C4E554D42455218210D0AA3656F7264657204696F7065726174696F6E64776
+1697469706172616D657465720AA3656F7264657205696F7065726174696F6E68726561644461746169706172616D657465
+72626964A3656F7264657206696F7065726174696F6E6873656E644461746169706172616D6574657286061830183618300
+D0AA3656F7264657207696F7065726174696F6E677365744261756469706172616D65746572192580A3656F726465720869
+6F7065726174696F6E647761697469706172616D65746572190258A3656F7264657209696F7065726174696F6E687265616
+44461746169706172616D657465726772617744617461
